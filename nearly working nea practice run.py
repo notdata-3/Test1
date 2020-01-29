@@ -1,6 +1,5 @@
 import time
 import random
-import sleep
 i = 0
 Player_1P = 0
 Player_2P = 0
@@ -88,50 +87,3 @@ if password== True and user == True and password_1 == True and user_1 == True:
         Player_2P += roll()
         print ('After this round ' ,user_1, 'You now have gained ',Player_2P, 'Points')
         time.sleep(1)
-
-        #---ok i think this also works-----
-
-        if Player_1P == Player_2P:
-            while Player_1T == Player_2T:
-                print ('x')
-                Player_1T = random.randint(1, 6)
-                Player_2T = random.randint(1, 6)
-
-                if Player_1T > Player_2T:
-                    Player_2P = 0
-                else:
-                        Player_2T > Player_1T
-                        Player_1P = 0
-
-
-                            #ok winner calculations now
-
-                        if Player_1P > Player_2P:
-                                Winner_Points = Player_1P
-                                Winner_User = user
-                                winner = (Winner_Points, user)
-                        elif Player_2P > Player_1P:
-                                    Winner_Points = Player_2P
-                                    Winner = (Winner_Points, user_1)
-                                    Winner_User = user_1
-
-                                    print('Well done, ', Winner_User, 'you won with ',Winner_Points,' points.')
-
-                                    #now 2 store the winners file
-
-                                    Winner = (Winner_Points,',' ,Winner_User)
-                                    f = open ('Winner.txt', 'a')
-                                    f.write(''.join(winner))
-                                    f.write('\n')
-                                    f.close
-
-                                    #ok now thats done time 2 move onto the leaderboard
-
-                                    f=open('the_big_pro_leaderboard.txt', 'r')
-                                    leaderboard = [line.replace('\n' , '') for line in f.readlines()]
-                                    f.close
-
-                                    for idx, item in enumerate(leaderboard):
-                                        if item.split(', ') [1] == winner[1] and int(item(split(', ')[0] < int(winner[0])
-                                                                                          [idx] = '{}, {}'.format(winner[0], winner[1]
-                                                                                                                  
